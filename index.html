@@ -7,30 +7,62 @@
   <meta name="theme-color" content="#ffffff" />
   <title>Curriculum Marek Maraj</title>
   <style>
-    body {
-      margin: 0;
+    * {
       padding: 0;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Verdana, Arial, Tahoma, Serif;
+    }
+
+    body {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: grey;
+      gap: 2vw;
+    }
+
+    img {
+      width: 100%;
+      max-width: 860px;
     }
 
     .pdf {
       width: 100%;
-      max-width: 100%;
+      height: 44px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    a {
+      all: unset;
+      color: rgb(40, 40, 40);
       height: 100%;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      margin: auto;
+      font-size: 1em;
+    }
+    @media (max-width: 600px) {
+      .pdf{
+        height: 32px;
+      }
+      a{
+      font-size: 12px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <object class='pdf' data='marekMaraj.pdf' type='application/pdf'>
-    <iframe src="marekMaraj.pdf" width="100%" height="100%" style="border:none">
-      <p>
-        Your browser does not support PDFs.
-      </p>
-    </iframe>
-  </object>
+  <div class="pdf">
+    <a href="marekMaraj.pdf" target="_blank">Ver en formato PDF</a>
+  </div>
+  <img src="1.jpg" />
+  <img src="2.jpg" />
 </body>
 
 </html>
